@@ -8,7 +8,9 @@ import Icon from '@mdi/react'
 import { mdiHomeOutline } from '@mdi/js';
 import { mdiNewspaperVariantOutline } from '@mdi/js';
 import { mdiInformationOutline } from '@mdi/js';
-import { mdiAccountCircleOutline } from '@mdi/js';
+import { mdiAccountOutline } from '@mdi/js';
+import { mdiLogoutVariant } from '@mdi/js';
+import { mdiGaugeFull } from '@mdi/js';
 import '../../assets/css/active-menu.css';
 
 
@@ -16,7 +18,9 @@ function Navbar() {
 
     const [Auth, setAuth] = useState(false);
 
-    const token = localStorage.getItem('passport');
+    const token = "f4k3T0k3n";
+
+    // const token = localStorage.getItem('passport');
     // const pisah = token.split('#');
     // const mytoken = pisah[3];
 
@@ -56,19 +60,31 @@ function Navbar() {
                                         </Button>
                                     </Link>
                                 </li>
+                                {/* <li className="nav-item">
+                                    <Button className="menu" id="home" variant="white" size="sm" style={{ fontSize: 14, marginRight: 18  }}>
+                                        Menu
+                                    </Button>
+                                </li> */}
                                 <li className="nav-item">
-                                    <Link to="/signup" className="nav-link" style={{ padding: 0, marginRight: 15 }}>
-                                        <Button className="menu" id="signup" variant="white" size="sm" style={{ fontSize: 14 }}>
-                                            Daftar
-                                        </Button>
-                                    </Link>
-                                </li>
-                                <li className="nav-item">
-                                    <Link to="/login" className="nav-link" style={{ padding: 0 }}>
-                                        <Button className="menu" id="login" variant="primary" size="sm" style={{ fontSize: 14 }}>
-                                            Masuk
-                                        </Button>
-                                    </Link>
+                                    <div className="btn-group">
+                                        <button className="btn btn-primary btn-sm dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            Hi, User Contoh
+                                        </button>
+                                        <ul className="dropdown-menu dropdown-menu-center" aria-labelledby="dropdownMenuButton">
+                                            <li>
+                                                <a className="dropdown-item" href="/dashboard" style={{ fontSize: 13 }}><Icon path={mdiGaugeFull} size={1} /> Dashboard</a>
+                                            </li>
+                                            <li>
+                                                <a className="dropdown-item" href="/account" style={{ fontSize: 13 }}><Icon path={mdiAccountOutline} size={1} /> Account</a>
+                                            </li>
+                                            <li>
+                                                <hr className="dropdown-divider" />
+                                            </li>
+                                            <li>
+                                                <a className="dropdown-item" href="#" style={{ fontSize: 13 }}><Icon path={mdiLogoutVariant} size={1} /> Logout</a>
+                                            </li>
+                                        </ul>
+                                    </div>
                                 </li>
                             </React.Fragment>
                         :   <React.Fragment>
@@ -130,7 +146,7 @@ function Navbar() {
 
             <li className="nav-item">
                 <Link to="/login" className="nav-link" id="m-signup">
-                    <Icon path={mdiAccountCircleOutline} size={1} />
+                    <Icon path={mdiAccountOutline} size={1} />
                     <br/>
                     Account
                 </Link>

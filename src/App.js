@@ -14,6 +14,8 @@ import Home from './resource/home/Index';
 import Signin from './resource/auth/Signin';
 import Signup from './resource/auth/Signup';
 
+import Dashboard from './resource/dashboard/Index';
+
 const PrivateRoute = () => {
   const token = localStorage.getItem('passport');
 
@@ -38,6 +40,8 @@ export default function App() {
 
             <Route path="/login" element={<Signin/>} />
             <Route path="/signup" element={<Signup/>} />
+
+            <Route path="/dashboard" element={<Dashboard/>}/>
 
             {/* <Route path='/dashboard' element={<PrivateRoute/>}>
               <Route path="/dashboard" element={<Dashboard/>}/>
