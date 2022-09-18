@@ -10,7 +10,6 @@ import { mdiNewspaperVariantOutline } from '@mdi/js';
 import { mdiInformationOutline } from '@mdi/js';
 import { mdiAccountCircleOutline } from '@mdi/js';
 import '../../assets/css/active-menu.css';
-// import '../../assets/css/navtab.css';
 
 
 function Navbar() {
@@ -52,14 +51,14 @@ function Navbar() {
                         ?   <React.Fragment>
                                 <li className="nav-item">
                                     <Link to="/" className="nav-link" style={{ padding: 0, marginRight: 15 }}>
-                                        <Button className="menu" id="home" variant="light" size="sm" style={{ fontSize: 14 }}>
+                                        <Button className="menu" id="home" variant="white" size="sm" style={{ fontSize: 14 }}>
                                             Home
                                         </Button>
                                     </Link>
                                 </li>
                                 <li className="nav-item">
                                     <Link to="/signup" className="nav-link" style={{ padding: 0, marginRight: 15 }}>
-                                        <Button className="menu" id="signup" variant="light" size="sm" style={{ fontSize: 14 }}>
+                                        <Button className="menu" id="signup" variant="white" size="sm" style={{ fontSize: 14 }}>
                                             Daftar
                                         </Button>
                                     </Link>
@@ -75,14 +74,14 @@ function Navbar() {
                         :   <React.Fragment>
                                 <li className="nav-item">
                                     <Link to="/" className="nav-link" style={{ padding: 0, marginRight: 15 }}>
-                                        <Button className="menu" variant="light" size="sm" id="home" style={{ fontSize: 14 }}>
+                                        <Button className="menu" variant="white" size="sm" id="home" style={{ fontSize: 14 }}>
                                             Home
                                         </Button>
                                     </Link>
                                 </li>
                                 <li className="nav-item">
                                     <Link to="/signup" className="nav-link" style={{ padding: 0, marginRight: 15 }}>
-                                        <Button className="menu" variant="light" size="sm" id="signup" style={{ fontSize: 14 }}>
+                                        <Button className="menu" variant="white" size="sm" id="signup" style={{ fontSize: 14 }}>
                                             Daftar
                                         </Button>
                                     </Link>
@@ -130,7 +129,7 @@ function Navbar() {
             </li>
 
             <li className="nav-item">
-                <Link to="/login" className="nav-link" id="m-login">
+                <Link to="/login" className="nav-link" id="m-signup">
                     <Icon path={mdiAccountCircleOutline} size={1} />
                     <br/>
                     Account

@@ -10,7 +10,7 @@ function Footer() {
                     <div className="copyright text-center text-sm text-muted" style={{ fontSize: 12 }}>
                         ©{new Date().getFullYear()} - Sellink || Boosting your business
                         <br/>
-                        made with <i class='bx bxs-heart'></i> by <b>Super Team</b>.
+                        made with <i className='bx bxs-heart'></i> by <b>Super Team</b>.
                         <br/>
                         Build Version 0.0.1
                     </div>
