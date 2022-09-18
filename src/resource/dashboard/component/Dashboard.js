@@ -4,7 +4,7 @@ import Image from 'react-bootstrap/Image';
 function Dashboard() {
 
   return (
-    <div className="tab-pane fade show active p-2" id="navs-pills-top-home" role="tabpanel">
+    <div className="tab-pane fade show active p-2" id="navs-pills-top-dashboard" role="tabpanel">
         <h1>Dashboard Page</h1>
         <br/>
         <p>

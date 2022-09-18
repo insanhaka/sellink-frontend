@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import Image from 'react-bootstrap/Image';
 
-function Content() {
+function Broadcast() {
 
   return (
-    <div className="tab-pane fade p-2" id="navs-pills-top-konten" role="tabpanel">
-        <h1>Konten Page</h1>
+    <div className="tab-pane fade p-2" id="navs-pills-top-broadcast" role="tabpanel">
+        <h1>Broadcast Page</h1>
         <br/>
         <p>
             Donut dragée jelly pie halvah. Danish gingerbread bonbon cookie wafer candy oat cake ice cream. Gummies
@@ -20,4 +20,4 @@ function Content() {
   );
 }
 
-export default Content;
+export default Broadcast;

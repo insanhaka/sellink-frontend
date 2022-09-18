@@ -6,6 +6,7 @@ import Footer from '../component/Footer';
 import Menu from '../component/Tabmenu';
 import Dashboard from './component/Dashboard';
 import Content from './component/Content';
+import Broadcast from './component/Broadcast';
 
 function Index() {
 
@@ -19,6 +20,7 @@ function Index() {
                     <div className="tab-content">
                         <Dashboard/>
                         <Content/>
+                        <Broadcast/>
                     </div>
                 </div>
             </div>
