@@ -82,8 +82,8 @@ function Signup() {
   }
 
   useEffect(() => {
-    const aktif1 = document.getElementById('signup').classList.add('active');
-    const aktif2 = document.getElementById('m-signup').classList.add('active');
+    const aktif1 = document.getElementById('signup').classList.add('menactive');
+    const aktif2 = document.getElementById('m-signup').classList.add('menactive');
 
   }, []);
 

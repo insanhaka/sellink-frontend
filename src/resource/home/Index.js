@@ -11,15 +11,15 @@ import Section4 from './component/Section4';
 function Index() {
 
   useEffect(() => {
-    const aktif1 = document.getElementById('home').classList.add('active');
-    const aktif2 = document.getElementById('m-home').classList.add('active');
+    const aktif1 = document.getElementById('home').classList.add('menactive');
+    const aktif2 = document.getElementById('m-home').classList.add('menactive');
 
   }, []);
 
   return (
     <React.Fragment>
     <Navbar/>
-      <div className="App" style={{ paddingTop : '8%' }}>
+      <div className="App" style={{ paddingTop : '5%' }}>
         <div className='container'>
           <Section1/>
           <Section2/>

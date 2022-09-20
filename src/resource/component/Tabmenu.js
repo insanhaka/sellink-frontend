@@ -8,7 +8,7 @@ import { mdiEmailFastOutline } from '@mdi/js';
 function Tabmenu() {
 
   return (
-    <ul className="nav nav-pills mb-3" role="tablist" style={{ marginRight: 30 }}>
+    <ul className="nav nav-pills mb-3 position-fixed" role="tablist" style={{ marginRight: 30 }}>
         <li className="nav-item mb-3">
             <button type="button" className="nav-link active" role="tab" data-bs-toggle="tab" data-bs-target="#navs-pills-top-dashboard" aria-controls="navs-pills-top-dashboard" aria-selected="true">
               <Icon path={mdiGaugeFull} size={1} /> Dashboard
