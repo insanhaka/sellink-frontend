@@ -3,6 +3,8 @@ import Image from 'react-bootstrap/Image';
 import Card from 'react-bootstrap/Card';
 import DataTable from 'react-data-table-component';
 
+import Empty from '../../../assets/img/Data-empty.png';
+
 
 const columns = [
   {
@@ -42,10 +44,16 @@ function Index() {
       <br/>
       <Card>
         <Card.Body className='p-4'>
-          <DataTable
+          <div className='row justify-content-center'>
+            <div className='col-md-6'>
+              <Image src={Empty} className="img-fluid" alt="Empty Image"/>
+              <h4>Oopss.. Data kamu tidak ditemukan</h4>
+            </div>
+          </div>
+          {/* <DataTable
               columns={columns}
               data={data}
-          />
+          /> */}
         </Card.Body>
       </Card>
     </div>
