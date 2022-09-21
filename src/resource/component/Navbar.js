@@ -67,7 +67,7 @@ function Navbar() {
                                 </li> */}
                                 <li className="nav-item">
                                     <div className="btn-group">
-                                        <button className="btn btn-primary btn-sm dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <button className="btn btn-light btn-sm dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style={{ fontSize: 14 }}>
                                             Hi, User Contoh
                                         </button>
                                         <ul className="dropdown-menu dropdown-menu-center" aria-labelledby="dropdownMenuButton">
