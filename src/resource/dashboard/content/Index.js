@@ -17,6 +17,12 @@ const columns = [
       selector: row => row.year,
       sortable: true,
   },
+  {
+      cell: row => <p>Tombol</p>,
+    	allowOverflow: true,
+      button: true,
+    	width: '56px',
+  },
 ];
 
 const data = [
@@ -38,7 +44,7 @@ function Index() {
     <div className="tab-pane fade " id="navs-pills-top-konten" role="tabpanel">
       <Card>
         <Card.Body>
-          <h2>Data Content</h2>
+          <h2 style={{ marginBottom: 0, marginLeft: 5 }}>Data Content</h2>
         </Card.Body>
       </Card>
       <br/>
@@ -50,10 +56,10 @@ function Index() {
               <h4>Oopss.. Data kamu tidak ditemukan</h4>
             </div>
           </div>
-          {/* <DataTable
+          <DataTable
               columns={columns}
               data={data}
-          /> */}
+          />
         </Card.Body>
       </Card>
     </div>
