@@ -1,7 +1,7 @@
 import { combineReducers } from "redux";
 
 const ApiAddress = {
-    url: 'http://localhost:8000/api/'
+    url: 'http://localhost:8001/api/'
     // url: 'http://192.168.0.103:8000/api/'
 }
 const ApiReducer = (state = ApiAddress , action) => {
@@ -9,7 +9,7 @@ const ApiReducer = (state = ApiAddress , action) => {
 }
 
 const ApiHeader = {
-    key: '@P!K3Y'
+    key: 'S3LL!5-@P!K3Y'
 }
 const HeaderReducer = (state = ApiHeader , action) => {
     return state;
