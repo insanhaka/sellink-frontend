@@ -16,7 +16,7 @@ function Section4() {
             <div className='col-md-6' style={{padding: '5%', paddingTop: '10%'}}>
                 <h2>Kembangkan dan atur bisnis kamu dengan mudah</h2>
                 <p>Hanya dengan satu link, kamu dapat mengetahui customer anda dan melakukan penawaran terbaik keseluruh customer</p>
-                <Button href="/dashboard" variant="primary" style={{ width: '70%', marginTop: 10 }}>Coba Gratis</Button>
+                <Button href="/user/dashboard" variant="primary" style={{ width: '70%', marginTop: 10 }}>Coba Gratis</Button>
             </div>
         
         </div>

@@ -41,11 +41,11 @@ export default function App() {
             <Route path="/login" element={<Signin/>} />
             <Route path="/signup" element={<Signup/>} />
 
-            <Route path="/dashboard" element={<Dashboard/>}/>
+            {/* <Route path="/dashboard" element={<Dashboard/>}/> */}
 
-            {/* <Route path='/dashboard' element={<PrivateRoute/>}>
-              <Route path="/dashboard" element={<Dashboard/>}/>
-            </Route> */}
+            <Route path='user' element={<PrivateRoute/>}>
+              <Route path="dashboard" element={<Dashboard/>}/>
+            </Route>
 
           </Routes>
         </div>

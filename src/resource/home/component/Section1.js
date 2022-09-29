@@ -15,7 +15,7 @@ function Section1() {
         <div className='col-md-6' style={{padding: '5%', paddingTop: '10%'}}>
             <h1>Tingkatkan bisnis kamu <br/>hanya dengan <b>satu link</b></h1>
             <p>Kami menyediakan layanan digital agar kamu dapat dengan mudah meningkatkan dan mengatur bisnis kamu.</p>
-            <Button href="/dashboard" variant="primary" style={{ width: '70%', marginTop: 10 }}>Buat Sekarang</Button>
+            <Button href="/user/dashboard" variant="primary" style={{ width: '70%', marginTop: 10 }}>Buat Sekarang</Button>
         </div>
     
     </div>

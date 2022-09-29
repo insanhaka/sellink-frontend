@@ -42,7 +42,7 @@ function Signin() {
                 password: password
             }, {
                 headers: {
-                    'kitasiapin-key': apiKey.key 
+                    'Authorization': apiKey.key 
                 }
             })
             .then(function (response) {
@@ -58,7 +58,7 @@ function Signin() {
                         timer: 2000
                     })
                     setLoading(false);
-                    navigate("/dashboard", { replace: true });
+                    navigate("/user/dashboard", { replace: true });
 
                 }else if (res == "empty") {
                     Swal.fire({

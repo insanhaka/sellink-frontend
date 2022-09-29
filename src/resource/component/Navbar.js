@@ -2,7 +2,8 @@ import React, { useEffect, useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Nav from 'react-bootstrap/Nav'
 import {
-    Link
+    Link,
+    useNavigate 
 } from "react-router-dom";
 import Icon from '@mdi/react'
 import { mdiHomeOutline } from '@mdi/js';
@@ -16,18 +17,20 @@ import '../../assets/css/active-menu.css';
 
 function Navbar() {
 
-    const [Auth, setAuth] = useState(false);
+    const [auth, setAuth] = useState(false);
+    const token = localStorage.getItem('passport');
 
-    const token = "f4k3T0k3n";
+    let navigate = useNavigate();
 
-    // const token = localStorage.getItem('passport');
-    // const pisah = token.split('#');
-    // const mytoken = pisah[3];
+    const logout = () => {
+        localStorage.removeItem('passport');
+        navigate("/", { replace: true });
+    }
 
     useEffect(() => {
-        
+
         if (token !== null) {
-            setAuth(true)
+            setAuth(true);
         }
 
     }, []);
@@ -39,7 +42,7 @@ function Navbar() {
     <nav className="navbar navbar-expand-lg blur bg-white blur-rounded top-0 z-index-3 shadow my-3 py-2 start-0 end-0 mx-4 d-none d-sm-block d-sm-none d-md-block position-fixed" style={{ borderRadius: 30 }}>
         <div className="container-fluid pe-3">
             <a className="navbar-brand font-weight-bolder ms-lg-0 ms-3 pt-3" href="/">
-                <h4>SELLINK</h4>
+                <h4>BERTAUT</h4>
             </a>
             <button className="navbar-toggler shadow-none ms-2" type="button" data-bs-toggle="collapse" data-bs-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
                 <span className="navbar-toggler-icon mt-2">
@@ -51,7 +54,7 @@ function Navbar() {
             <div className="collapse navbar-collapse" id="navigation">
                 <ul className="navbar-nav mx-auto ms-xl-auto me-4">
                     
-                    {Auth
+                    {auth
                         ?   <React.Fragment>
                                 <li className="nav-item">
                                     <Link to="/" className="nav-link" style={{ padding: 0, marginRight: 15 }}>
@@ -72,16 +75,16 @@ function Navbar() {
                                         </button>
                                         <ul className="dropdown-menu dropdown-menu-center" aria-labelledby="dropdownMenuButton">
                                             <li>
-                                                <a className="dropdown-item" href="/dashboard" style={{ fontSize: 13 }}><Icon path={mdiGaugeFull} size={1} /> Dashboard</a>
+                                                <a className="dropdown-item" href="/user/dashboard" style={{ fontSize: 13 }}><Icon path={mdiGaugeFull} size={1} /> Dashboard</a>
                                             </li>
                                             <li>
-                                                <a className="dropdown-item" href="/account" style={{ fontSize: 13 }}><Icon path={mdiAccountOutline} size={1} /> Account</a>
+                                                <a className="dropdown-item" href="/user/account" style={{ fontSize: 13 }}><Icon path={mdiAccountOutline} size={1} /> Account</a>
                                             </li>
                                             <li>
                                                 <hr className="dropdown-divider" />
                                             </li>
                                             <li>
-                                                <a className="dropdown-item" href="#" style={{ fontSize: 13 }}><Icon path={mdiLogoutVariant} size={1} /> Logout</a>
+                                                <a className="dropdown-item" href="" onClick={logout} style={{ fontSize: 13 }}><Icon path={mdiLogoutVariant} size={1} /> Logout</a>
                                             </li>
                                         </ul>
                                     </div>
